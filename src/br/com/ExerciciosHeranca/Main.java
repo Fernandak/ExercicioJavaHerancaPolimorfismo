@@ -2,7 +2,14 @@ package br.com.ExerciciosHeranca;
 
 public class Main {
 
+	public void emitirSom( Animal animal ) {
+		animal.emitirSom();
+	}
+
 	public static void main(String[] args) {
+
+		Main m = new Main();
+		m.emitirSom( new Animal());
 
 		Cachorro dog = new Cachorro();
 
@@ -13,7 +20,7 @@ public class Main {
 		System.out.println("Nome: "+dog.getNome());
 		System.out.println("Idade: "+dog.getIdade()+" anos");
 
-		dog.emitirSom();
+		m.emitirSom( new Cachorro());
 		dog.Correr();
 
 		System.out.println();
@@ -27,20 +34,20 @@ public class Main {
 		System.out.println("Nome: "+Hor.getNome());
 		System.out.println("Idade: "+Hor.getIdade()+" anos");
 
-		Hor.emitirSom();
+		m.emitirSom( new Cavalo());
 		Hor.Correr();
-	
+
 		System.out.println();
 		Preguica laz = new Preguica();
 
 		laz.setNome("Sid");
 		laz.setIdade(20);
 
-		System.out.println("Bixo Preguiça:");
+		System.out.println("Preguiï¿½a:");
 		System.out.println("Nome: "+laz.getNome());
 		System.out.println("Idade:"+laz.getIdade()+" anos");
 
-		laz.emitirSom();
+		m.emitirSom( new Preguica());
 		laz.subirArvore();
 	}
 
